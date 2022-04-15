@@ -193,4 +193,4 @@ function Violin({ synth, setSynth }: InstrumentProps): JSX.Element {
   );
 }
 
-export const ViolinInstrument = new Instrument('Violin_Duy-Nguyen', Violin);
+export const ViolinInstrument = new Instrument('Violin', Violin);
