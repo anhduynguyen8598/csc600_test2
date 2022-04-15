@@ -10,6 +10,7 @@ export const CircularVisualizer = new Visualizer(
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth;
     const height = window.innerHeight / 2;
+    let averageVal = 0;
 
     p5.background(0, 0, 0, 255);
 
@@ -20,13 +21,9 @@ export const CircularVisualizer = new Visualizer(
     if (values.length > 360) {
       values = values.slice(0, 360);
     }
-
-    const idx = 100;
-    const val = values[idx] as number * 10000;
-
-    p5.stroke(val, 100, val, 255);
+    p5.stroke(255);
     p5.strokeWeight(3);
-    p5.translate(width / 2, height / 2);
+    p5.translate(width / 2, height / 2)
     p5.beginShape();
     for (let i = 0; i < values.length; i++) {
       let amplitude = values[i] as number
